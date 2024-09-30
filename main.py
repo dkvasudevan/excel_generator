@@ -17,11 +17,9 @@ async def create_excel(user_prompt: str):
     scraper = ExcelScraper(file_path=file_path)
     excel_data = scraper.get_matrix()
     prompt = pg.generate_prompt(excel_data=excel_data, user_prompt= user_prompt)
-
     sum_data_path = "/Users/danvasudevan/projects/excel-generator/test-data/SUM_USECASE"
     resulting_excel = gpt.create_completion(prompt=prompt)
     matrix_list = ast.literal_eval(resulting_excel)
-
     util.generate_excel(input_matrix=matrix_list, folder_path=sum_data_path, file_name="RESULT_SUM")
 
 
