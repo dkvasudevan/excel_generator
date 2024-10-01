@@ -1,6 +1,11 @@
 from openai import OpenAI
-client = OpenAI()
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+client = OpenAI()
+client.api_key= os.getenv("OPENAI_API_KEY")
 
 def create_completion(prompt: str) -> str:
     completion = client.chat.completions.create(
