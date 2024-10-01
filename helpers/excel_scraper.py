@@ -1,11 +1,11 @@
 import pandas as pd
 
 class ExcelScraper:
-    def __init__(self, file_path: str):
+    def __init__(self, file_data):
         """
         Initialize the ExcelScraper with the path to the Excel file.
         """
-        self.file_path = file_path
+        self.file = file_data
         self.data = None
         # self.sheet_names = None
         self.load_excel() 
@@ -15,7 +15,7 @@ class ExcelScraper:
         Load the Excel file and get the sheet names.
         """
         try:
-            self.data = pd.ExcelFile(self.file_path)
+            self.data = pd.ExcelFile(self.file)
             # print(self.data)
             # self.sheet_names = self.data.sheet_names
             # print(f"Excel file loaded successfully. Available sheets: {self.sheet_names}")
