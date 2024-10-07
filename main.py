@@ -16,7 +16,7 @@ project_dir = os.getenv('PROJECT_DIR')
 #add the values from column 1 and column 2. Put the sum in column 3
 @app.get("/")
 async def root():
-    return {"message": "Welcome to excel generator"}
+    return {"message": "Welcome I am excelAI, your AI Excel assistant!"}
 
 @app.post("/excel")
 async def create_excel(user_prompt: str, file_data: bytes = File()):
