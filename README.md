@@ -1,5 +1,5 @@
 # Introduction
-This repo is the backend for an AI Excel Guru application. All you have to do is simply input an excel sheet, tell the AI what analysis you want done on the excel sheet and it will generate the output for you.
+This repo is the backend for an AI Excel Assistant application. All you have to do is simply input an excel sheet, tell the AI what analysis you want done on the excel sheet and it will generate the output for you.
 Backend Tech Stack: Python, Fast API, OpenAI API
 
 
